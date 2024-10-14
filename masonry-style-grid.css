@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 2rem;
+  font-family: "Poppins";
+  background: #f7f7ff;
+}
+
+header {
+  background: #fff;
+  padding: 1rem;
+}
+
+nav {
+  max-width: 140rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size:medium;
+}
+
+nav h1 {
+  text-transform: uppercase;
+  line-height: 1.6rem;
+}
+
+nav h1 div:first-child {
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  font-size: large;
+}
+
+nav h1 div:last-child {
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+  margin-left: 0.5rem;
+}
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 25rem;
+  gap: 3rem;
+}
+
+main div {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0.6rem;
+  border: 1.6rem solid #fff;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.05);
+}
+
+main img {
+  min-width: 100%;
+  height: 100%;
+}
+
+main .short {
+  grid-row: span 1;
+}
+
+main .tall {
+  grid-row: span 2;
+}
+
+/* main div:nth-child(4) {
+  grid-column: span 2;
+} */
+
+@media screen and (max-width:1056px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main div {
+    margin: 0 auto;
+  }
+  main div:nth-child(2) {
+    max-width: 414px;
+  }
+  main div:nth-child(3) {
+    max-width: 300px;
+    padding: 4rem;
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width:700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  main div:nth-child(2) {
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+
+  main div:nth-child(4) {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  main div:nth-child(5) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  main div:nth-child(6) {
+    max-width: 400px;
+    max-height: 300px;
+    margin: 0 auto;
+   
+  }
+
+  main div:nth-child(7) {
+    max-width: 400px;
+    margin: 0 auto;
+   
+  }
+
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  nav h1 {
+    grid-column: 1 / 5;
+    grid-row: 1;
+  }
+}
